@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.rowC {
+    display: flex;
+    background-color: darkblue;
+    padding-bottom:100%;
+    /*flex-direction: row;*/
+}
+
+.navbar-align{
+    padding-top:1rem;
+}

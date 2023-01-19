@@ -3,8 +3,9 @@
     "",
     "\\public",
     "\\src",
-    "\\src\\Components"
+    "\\src\\Components",
+    "\\src\\Scripts"
   ],
-  "SelectedNode": "\\package.json",
+  "SelectedNode": "\\src\\Components\\App.css",
   "PreviewInSolutionExplorer": false
 }
