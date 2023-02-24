@@ -1,5 +1,6 @@
 // JavaScript source code
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import GetBooks from './GetBooks';
 
 const Addbook = () => {
     const [title, settitle] = useState('');
@@ -31,6 +32,9 @@ const Addbook = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         addBooksDetails(title, author, isbn);
+        settitle('');
+        setauthor('');
+        setisbn('');
         window.location.reload();
     };
 
@@ -46,18 +50,18 @@ const Addbook = () => {
                     <form className="form-group" onSubmit={handleSubmit}>
                     <div className="field m-3">
                          <label><b>Title</b></label>
-                            <input type="text" className="form-control" value={title} onChange={(e) => settitle(e.target.value)}></input>
+                                <input type="text" className="form-control" required value={title} onChange={(e) => settitle(e.target.value)}></input>
                     </div>
                      <div className="field  m-3"> 
                          <label><b>Author </b></label>
-                            <input type="text" className="form-control" value={author} onChange={(e) => setauthor(e.target.value)}></input>
+                                <input type="text" className="form-control" required value={author} onChange={(e) => setauthor(e.target.value)}></input>
                     </div>
                     <div className="field  m-3">
                         <label><b>ISBN</b> </label>
-                            <input type="text" className="form-control" value={isbn} onChange={(e) => setisbn(e.target.value)}></input>
+                                <input type="text" className="form-control" required value={isbn} onChange={(e) => setisbn(e.target.value)}></input>
                      </div>
                     <div className="text-center" style={{ paddingTop: "10px" }}>
-                            <button type="submit" className="btn btn-secondary">Submit</button>
+                                <button type="submit" className="btn btn-secondary" >Submit</button>
                      </div>
                     </form>
                 </div>
